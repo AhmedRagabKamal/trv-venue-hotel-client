@@ -2,8 +2,9 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import NavBar from './layout/navbar';
-import DashBoard from './dashboard/dashboard';
+import Hotels from './dashboard/hotels/components/hotels/hotels';
 import NotFound from './static/not-found/notFound';
+import HotelForm from './dashboard/hotels/components/hotels/hotelForm';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
@@ -14,8 +15,9 @@ function App() {
       <NavBar />
       <main className="container">
         <Switch>
-          <Route path="/dashboard" component={DashBoard} />
-          <Route path="/not-found" component={NotFound} />
+          <Route path="/hotels/:id" component={HotelForm} />
+          <Route path="/hotels" component={Hotels} />
+          <Route exact path="/not-found" component={NotFound} />
           <Redirect to="/not-found" />
         </Switch>
       </main>

@@ -17,7 +17,7 @@ class Hotels extends Component {
   };
 
   async componentDidMount() {
-    const { data: hotels } = await getHotels();
+    const hotels = await getHotels();
     this.setState({ hotels });
   }
 
@@ -25,11 +25,10 @@ class Hotels extends Component {
     const originalHotels = this.state.hotels;
     const hotels = originalHotels.filter(h => h.id !== hotel.id);
     this.setState({ hotels });
-
     try {
       await deleteHotel(hotel.id);
-    } catch (ex) {
-      if (ex.response && ex.response.status === 404)
+    } catch (error) {
+      if (error.response && error.response.status === 404)
         toast.error('This hotel has already been deleted.');
       this.setState({ hotels: originalHotels });
     }
@@ -55,6 +54,7 @@ class Hotels extends Component {
       search
     } = this.state;
     const { length: count } = allHotels;
+    const { history } = this.props;
     if (count === 0) return <p>There is no hotels in database</p>;
     let filtered = allHotels;
     if (search) {
@@ -68,6 +68,12 @@ class Hotels extends Component {
     return (
       <React.Fragment>
         <h1>Hotels</h1>
+        <button
+          onClick={() => history.push('/hotels/new')}
+          className="btn btn-primary btn-sm"
+        >
+          New hotel
+        </button>
         <SearchBox value={search} onChange={this.handleSearch} />
         <HotelsList
           hotels={hotels}

@@ -13,6 +13,7 @@ const HotelsList = ({ hotels, onDelete, onSort, columnSort }) => {
         </Link>
       )
     },
+    { path: 'description', label: 'Description' },
     { path: 'distance_to_venue', label: 'Distance to venue' },
     { path: 'rating', label: 'Rating' },
     { path: 'price_category', label: 'Price category' },
