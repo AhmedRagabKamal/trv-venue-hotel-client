@@ -1,5 +1,5 @@
 import { get } from 'lodash-es';
-// import RoomModel from './RoomModel';
+import RoomModel from './RoomModel';
 
 class HotelModel {
   constructor(hotel = {}) {
@@ -12,12 +12,12 @@ class HotelModel {
     if (hotel.id) {
       this.id = get(hotel, 'id', '');
     }
-    // if (hotel.images) {
-    //   this.images = get(hotel, 'images', []);
-    // }
-    // if (hotel.rooms) {
-    //   this.rooms = get(hotel, 'rooms', []).map(room => new RoomModel(room));
-    // }
+    if (hotel.images) {
+      this.images = get(hotel, 'images', []);
+    }
+    if (hotel.rooms) {
+      this.rooms = get(hotel, 'rooms', []).map(room => new RoomModel(room));
+    }
   }
 }
 

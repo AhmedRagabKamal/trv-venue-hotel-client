@@ -1,13 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --primary-color: #283655;
+  --secondary-color: #ffab00;
+  --text-gray-light: #bebebe;
+  --text-gray-dark: #888888;
+  --text-black: #303030;
+  --text-yellow-light: #fffbef;
+  --text-success: #53dc8c;
+  --text-error: #ef3434;
+  --text-white: #ffffff;
+}
+
+/* ==   Global utils classes    == */
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success {
+  background-color: #4caf50;
+} /* Green */
+.success:hover {
+  background-color: #46a049;
+}
+
+.info {
+  background-color: #2196f3;
+} /* Blue */
+.info:hover {
+  background: #0b7dda;
+}
+
+.warning {
+  background-color: #ff9800;
+} /* Orange */
+.warning:hover {
+  background: #e68a00;
+}
+
+.danger {
+  background-color: #f44336;
+} /* Red */
+.danger:hover {
+  background: #da190b;
+}
+
+.default {
+  background-color: #e7e7e7;
+  color: black;
+} /* Gray */
+.default:hover {
+  background: #ddd;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 12px;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table tr.header,
+table tr:hover {
+  background-color: #f1f1f1;
 }

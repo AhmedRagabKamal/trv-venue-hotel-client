@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+.container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.hotelImage {
+  min-width: 200px;
+  margin-right: 10px;
+}
+.hotelImage img {
+  max-width: 100%;
+  width: 220px;
+  height: 244px;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.hotelInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.hotelName {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ratingNumber {
+  display: inline-block;
+  background-color: var(--text-success);
+  color: var(--text-white);
+  border-radius: 50%;
+  padding: 15px;
+}
+.seeRoom {
+  margin-top: 20px;
+  align-self: flex-end;
+}

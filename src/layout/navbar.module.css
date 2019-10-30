@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-white);
+}
+.logo {
+  font-size: 35px;
+}

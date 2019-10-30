@@ -1,0 +1,9 @@
+.hotelGallery {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.hotelGallery img {
+  max-width: 100%;
+  width: 400px;
+}
